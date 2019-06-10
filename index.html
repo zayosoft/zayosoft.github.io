@@ -1,0 +1,38 @@
+---
+layout: index
+title: Contents
+---
+
+
+<!-- Projects Row -->
+{% for data in site.data.zayoSoftList %}
+
+<div class="row">
+
+    <div class="col-md-6 portfolio-item">
+        <a href="{{data.left.direct}}" target="_blank">
+            <img class="img-responsive img-thumbnail img-highth" src="{{data.left.img}}" alt="" >
+        </a>
+        <h3>
+            <a href="{{data.left.direct}}" target="_blank">{{data.left.title}}</a>
+        </h3>
+        <p>
+            <a href="{{data.left.post}}" target="_blank">{{data.left.desc}}</a>
+        </p>
+    </div>
+
+    <div class="col-md-6 portfolio-item">
+        <a href="{{data.right.direct}}" target="_blank">
+            <img class="img-responsive img-thumbnail img-highth" src="{{data.right.img}}" alt="">
+        </a>
+        <h3>
+            <a href="{{data.right.direct}}" target="_blank">{{data.right.title}}</a>
+        </h3>
+        <p>
+            <a href="{{data.right.post}}" target="_blank">{{data.right.desc}}</a>
+        </p>
+    </div>
+
+</div>
+{% endfor %}
+<!-- /.row -->
