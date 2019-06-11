@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        (function(){
+
+            const redirects = {
+                "gofang": "https://zayosoft.github.io/spa-gofang/formulafinder.html",
+                "ahp": "https://zayosoft.github.io/spa-ahp-mind-miner/app.html",
+                "math": "https://zayosoft.github.io/spa-decimal-numbers/app.html", 
+            }
+
+            function getAnchor() {
+                var currentUrl = document.URL,
+                urlParts   = currentUrl.split('#');
+                return (urlParts.length > 1) ? urlParts[1] : null;
+            }
+
+            function goto(){
+                var currentanchor = getAnchor()
+                var nexturl = ( redirects[ currentanchor ] )? redirects[ currentanchor ] : 'https://pinedance.github.io'
+                window.location.href = nexturl
+            }
+
+            goto()
+
+        })()
+
+    </script>
+
+</body>
+
+</html>
